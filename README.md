@@ -1,1 +1,1 @@
-# Karyakina_ThreatHunting
+# Карякина А.О. БИСО-01-20
