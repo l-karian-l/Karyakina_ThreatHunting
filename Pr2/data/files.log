@@ -1,0 +1,23 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	files
+#open	2023-05-26-20-01-28
+#fields	ts	fuid	tx_hosts	rx_hosts	conn_uids	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+#types	time	string	set[addr]	set[addr]	set[string]	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+1685120126.438431	F97qcireg8xa4izB6	104.18.20.226	192.168.1.70	ClB6DC4UzqH4Z9A7Wi	HTTP	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	1414	1414	0	0	F	-	-	-	-	-	-	-
+1685120127.616714	FhazbO12icgqT2QSz1	13.32.111.57	192.168.1.70	CRMxyA1Rh5OsZAtCnb	HTTP	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	471	471	0	0	F	-	-	-	-	-	-	-
+1685120130.154552	FoLREw37KDMjtMfT1h	23.35.105.107	192.168.1.70	CXcG1T3OQfvAHgjTsf	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	313	-	0	0	F	-	-	-	-	-	-	-
+1685120134.298175	FANKxj2lHD9Yenk908	104.18.21.226	192.168.1.70	CwBiLz3MJGAq41gpy4	HTTP	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	1423	1423	0	0	F	-	-	-	-	-	-	-
+1685120134.628320	FprrlC3FjNyxSIVa26	212.188.39.65	192.168.1.70	CfgJ0q4HCkZVnPgV15	HTTP	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	503	503	0	0	F	-	-	-	-	-	-	-
+1685120159.469351	FLKxo8pvvml0GqwFe	23.35.105.107	192.168.1.70	C6tBCM20skr0dGvbv3	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	313	-	0	0	F	-	-	-	-	-	-	-
+1685120159.876966	FbAK2e1QJqoz9ODqak	185.72.229.124	192.168.1.70	CemlH732jRt9gk4YXa	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	1414	-	0	0	F	-	-	-	-	-	-	-
+1685120163.920750	F4PPjU1sG9CAruS2Kj	212.188.39.65	192.168.1.70	CQnC2P20wUwVhCBd0h	HTTP	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	503	503	0	0	F	-	-	-	-	-	-	-
+1685120164.847167	FL450N1ckzOkjjKX52	80.68.253.122	192.168.1.70	CZ60zp42m8Nmk0k8kg	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	1414	-	0	0	F	-	-	-	-	-	-	-
+1685120172.005612	FKwWb4ABqcRu2usq5	185.72.229.124	192.168.1.70	CMwjyy3dFzprTs2XKc	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	1414	-	0	0	F	-	-	-	-	-	-	-
+1685120197.867947	FEiWBc1aEOjFEzeool	23.35.105.107	192.168.1.70	CuyF1a2mnUG7KyG2L2	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	313	-	0	0	F	-	-	-	-	-	-	-
+1685120208.220681	FCGghgLBd4QHw2NR6	104.18.21.226	192.168.1.70	CVhJ1k1NHFdTIUq4X2	HTTP	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	1423	1423	0	0	F	-	-	-	-	-	-	-
+1685120209.736894	F7Ty1mfBpuuDK9Ci2	104.18.20.226	192.168.1.70	CqHQBcg1WUcXnXpc6	HTTP	0	OCSP_REPLY	application/ocsp-response	-	0.000000	-	F	1414	1414	0	0	F	-	-	-	-	-	-	-
+1685120218.515408	FiZm9s3rqEzuLw8i1a	104.18.21.226	192.168.1.70	CFTyeE4mfGlJMTa4R1	HTTP	0	(empty)	-	-	0.027084	-	F	47787	47787	0	0	F	-	-	-	-	-	-	-
+#close	2023-05-26-20-01-30

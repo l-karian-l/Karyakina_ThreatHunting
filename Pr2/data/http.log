@@ -1,0 +1,18 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	http
+#open	2023-05-26-20-01-28
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	version	user_agent	origin	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	string	count	count	count	string	count	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]
+1685120126.397465	ClB6DC4UzqH4Z9A7Wi	192.168.1.70	51897	104.18.20.226	80	1	GET	ocsp.globalsign.com	/gsgccr3dvtlsca2020/ME0wSzBJMEcwRTAJBgUrDgMCGgUABBQoKOHJRQbCE+3DXqwFiztBxLYdhwQUDZjAc3+rvb3ZR0tJrQpKDKw+x3wCDFp9rMp69Vqx4QlhuA==	-	1.1	Microsoft-CryptoAPI/10.0	-	0	1414	200	OK	-	-	(empty)	-	-	-	-	-	-	F97qcireg8xa4izB6	-	application/ocsp-response
+1685120127.591719	CRMxyA1Rh5OsZAtCnb	192.168.1.70	51912	13.32.111.57	80	1	GET	ocsp.r2m02.amazontrust.com	/MFEwTzBNMEswSTAJBgUrDgMCGgUABBRmbQtwnInkvkvr7BNFR+S2lTYPjAQUwDFSzVpQw4J8dHHOy+mc+XrrguICEAb6shEcobapW9+lKAkvnCU=	-	1.1	Microsoft-CryptoAPI/10.0	-	0	471	200	OK	-	-	(empty)	-	-	-	-	-	-	FhazbO12icgqT2QSz1	-	application/ocsp-response
+1685120134.265274	CwBiLz3MJGAq41gpy4	192.168.1.70	51971	104.18.21.226	80	1	GET	ocsp2.globalsign.com	/gsalphasha2g2/ME0wSzBJMEcwRTAJBgUrDgMCGgUABBSE1Wv4CYvTB7dm2OHrrWWWqmtnYQQU9c3VPAhQ+WpPOreX2laD5mnSaPcCDG4hqOjLjmJ4aYSOXQ==	-	1.1	Microsoft-CryptoAPI/10.0	-	0	1423	200	OK	-	-	(empty)	-	-	-	-	-	-	FANKxj2lHD9Yenk908	-	application/ocsp-response
+1685120134.621626	CfgJ0q4HCkZVnPgV15	192.168.1.70	51976	212.188.39.65	80	1	GET	r3.o.lencr.org	/MFMwUTBPME0wSzAJBgUrDgMCGgUABBRI2smg+yvTLU/w3mjS9We3NfmzxAQUFC6zF7dYVsuuUAlA5h+vnYsUwsYCEgN3pwP73c+YEg2ZCR7xMN/E1A==	-	1.1	Microsoft-CryptoAPI/10.0	-	0	503	200	OK	-	-	(empty)	-	-	-	-	-	-	FprrlC3FjNyxSIVa26	-	application/ocsp-response
+1685120163.912866	CQnC2P20wUwVhCBd0h	192.168.1.70	52167	212.188.39.65	80	1	GET	r3.o.lencr.org	/MFMwUTBPME0wSzAJBgUrDgMCGgUABBRI2smg+yvTLU/w3mjS9We3NfmzxAQUFC6zF7dYVsuuUAlA5h+vnYsUwsYCEgTCWLW2xSzAUet9IFFMcVsc/g==	-	1.1	Microsoft-CryptoAPI/10.0	-	0	503	200	OK	-	-	(empty)	-	-	-	-	-	-	F4PPjU1sG9CAruS2Kj	-	application/ocsp-response
+1685120177.483708	C8fgud5ZCt3DTypUh	192.168.1.75	49364	91.189.91.49	80	1	GET	connectivity-check.ubuntu.com	/	-	1.1	-	-	0	0	204	No Content	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1685120208.179360	CVhJ1k1NHFdTIUq4X2	192.168.1.70	52415	104.18.21.226	80	1	GET	ocsp2.globalsign.com	/gsalphasha2g2/ME0wSzBJMEcwRTAJBgUrDgMCGgUABBSE1Wv4CYvTB7dm2OHrrWWWqmtnYQQU9c3VPAhQ+WpPOreX2laD5mnSaPcCDHbmYqVM6SXzS9o49w==	-	1.1	Microsoft-CryptoAPI/10.0	-	0	1423	200	OK	-	-	(empty)	-	-	-	-	-	-	FCGghgLBd4QHw2NR6	-	application/ocsp-response
+1685120209.691797	CqHQBcg1WUcXnXpc6	192.168.1.70	52435	104.18.20.226	80	1	GET	ocsp.globalsign.com	/gsgccr3dvtlsca2020/ME0wSzBJMEcwRTAJBgUrDgMCGgUABBQoKOHJRQbCE+3DXqwFiztBxLYdhwQUDZjAc3+rvb3ZR0tJrQpKDKw+x3wCDFaUx5CAQNLYwkXvzw==	-	1.1	Microsoft-CryptoAPI/10.0	-	0	1414	200	OK	-	-	(empty)	-	-	-	-	-	-	F7Ty1mfBpuuDK9Ci2	-	application/ocsp-response
+1685120218.472618	CFTyeE4mfGlJMTa4R1	192.168.1.70	52515	104.18.21.226	80	1	GET	crl.globalsign.com	/gsgccr3dvtlsca2020.crl	-	1.1	Microsoft-CryptoAPI/10.0	-	0	47787	200	OK	-	-	(empty)	-	-	-	-	-	-	FiZm9s3rqEzuLw8i1a	-	-
+#close	2023-05-26-20-01-30
