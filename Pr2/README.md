@@ -38,5 +38,78 @@
 активный серфинг в Интернете, включая поиск в поисковых системах и просмотр новостей. Однако не рекомендуется использовать только один сервис, такой как Telegram или Youtube, для формирования всего объема трафика,
 так как это может привести к отсутствию характерных особенностей, которые можно было бы отобразить и проанализировать на следующих этапах.
 
+![image](https://github.com/l-karian-l/Karyakina_ThreatHunting/blob/main/Pr2/img/traff.png)
 
+### Шаг 2
 
+Выделить метаинформацию сетевого трафика с помощью утилиты Zeek:
+```
+zeek –C –r traffic.pcapng
+```
+
+Вычленить адреса из dns.log:
+```
+awk '/^[^#]/ {print $10}' dns.log >> dns
+```
+
+Полученные файлы:
+![image](https://github.com/l-karian-l/Karyakina_ThreatHunting/blob/main/Pr2/img/files.png)
+
+### Шаг 3
+
+Собрать данные об источниках нежелательного трафика, в данном случае с github – [https://github.com/StevenBlack/hosts/blob/master/data/KADhosts/hosts](https://github.com/StevenBlack/hosts/tree/master/data)
+
+``` bash
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts -o /home/karian/hosts
+```
+
+![image](https://github.com/l-karian-l/Karyakina_ThreatHunting/blob/main/Pr2/img/bad_truff.png)
+
+### Шаг 4
+
+Написана программа на языке Python 3.10, которая подсчитывает процент
+нежелательного трафика в собранном на этапе 1:
+
+Код:
+```
+bad_hosts = [] # нежелательные хосты
+with open('hosts') as file:
+    for line in file.readlines()[40:]:
+        if line[0] == '#':
+            continue
+        try:
+            bad_hosts.append(line.split()[1])
+        except IndexError:
+            continue
+        
+hosts = [] # все хосты
+with open('dns.log') as file:
+    for line in file.readlines():
+        if line[0] == '#':
+            continue
+        try:
+            hosts.append(line.split()[9])
+        except IndexError:
+            continue
+
+bad_count = len([host for host in hosts if host in bad_hosts])
+percentile = round(bad_count/len(hosts),3)*100
+print("Количество нежелательных хостов: {}.".format(str(bad_count)),
+"Процент нежелательного трафика: {}%.".format(str(percentile)),sep='\n')
+```
+## ️Оценка результата
+
+Собрано 100+ Мб трафика.
+
+Собраны данные об источниках нежелательного трафика.
+
+Проведенно их сравнение, найденны записи нежелательного трафика. 
+
+Подсчитали процент нежелательного трафика.
+
+Получены результаты:
+![image](https://github.com/l-karian-l/Karyakina_ThreatHunting/blob/main/Pr2/img/result.png)
+
+## ️Вывод 
+
+По итогам выполнения практической работы были освоены ключевые методы захвата трафика через Wireshark, извлечения информации о доменных именах из собранного трафика с помощью Zeek и анализа нежелательного трафика.
