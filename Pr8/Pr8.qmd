@@ -27,6 +27,58 @@
 
 5. Заполняем данный файл, на основании инструкции [Создание пользовательского рабочего процесса GitHub Actions для публикации сайта](https://docs.github.com/ru/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0-github-actions-%D0%B4%D0%BB%D1%8F-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8-%D1%81%D0%B0%D0%B9%D1%82%D0%B0)
 
+```
+# This is a basic workflow to help you get started with Actions
+name: Pr8
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: 
+     - 'main'
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+   # This workflow contains a single job called "build"
+  build:
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v1.0.8
+        
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+          
+ 
+  deploy:
+    runs-on: ubuntu-latest
+
+    # Add a dependency to the build job
+    needs: build
+    
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write 
+   
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+
+```
+
 6. Комитим наш файл. (В `Actions` мы можем посмотреть, есть ли ошибки)
 
 7. Переходим в настройки:
