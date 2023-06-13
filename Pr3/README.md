@@ -40,14 +40,15 @@ docker compose ps -a
 
 В них прописаны адреса подключения к Elasticsearch, Kibana, а также для Packetbeat указаны сетевые интерфейсы, для Filebeat - файлы для чтения.
 
+5. Через `localhost:5601` подключаемся к Elastic.
+
 ![image](https://github.com/l-karian-l/Karyakina_ThreatHunting/assets/72932728/97aee60a-1349-4a1d-b109-eb100377741b)
 
 ![image](https://github.com/l-karian-l/Karyakina_ThreatHunting/assets/72932728/9e00897a-acab-4a37-b5cd-a1da3196a3b3)
 
-5. Из-за ошибки, выводимой в пункте 3, при создании index было отображено:
+6. Из-за ошибки, выводимой в пункте 3, при создании index было отображено:
 
 ![image](https://github.com/l-karian-l/Karyakina_ThreatHunting/assets/72932728/21c6a495-a69a-4e6a-a84a-d4757ee9c710)
-
 
 На данном этапе, к сожалению, я остановилась. 
 
