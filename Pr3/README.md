@@ -14,7 +14,7 @@
 
 ![image](https://github.com/l-karian-l/Karyakina_ThreatHunting/assets/72932728/16123faf-490e-4cb9-821f-9110c9b7dd5a)
 
-2. Создаём файл `docker-compose.yml`, а так же конфигурационные файлы для каждого модуля:
+2. Создаём файл `docker-compose.yml`, а так же конфигурационные файлы для каждого модуля
 
 3. Запускаем Docker container
 
